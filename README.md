@@ -22,5 +22,9 @@ rollup({
 });
 ```
 
+## Things to improve on
+- Check for `index.js` file asynchronously
+- Use absolute paths instead of relative ones to be consistent with how Rollup handles modules
+
 ## License
 MIT, see `LICENSE` for more information
