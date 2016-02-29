@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-local-resolve",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Resolves index.js files with Rollup",
   "main": "dist/rollup-plugin-local-resolve.js",
   "jsnext:main": "dist/rollup-plugin-local-resolve.es2015.js",
