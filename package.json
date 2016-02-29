@@ -7,7 +7,7 @@
   "scripts": {
     "build": "rollup-babel-lib-bundler -f cjs,es6 src/index.js",
     "lint": "eslint .",
-    "pretest": "npm run lint",
+    "pretest": "npm-run-all -p build lint",
     "test": "ava test/index.js"
   },
   "repository": {
@@ -32,6 +32,7 @@
     "babel-preset-es2015-loose-rollup": "^7.0.0",
     "eslint": "^2.2.0",
     "eslint-config-airbnb": "^6.0.2",
+    "npm-run-all": "^1.5.1",
     "nyc": "^5.6.0",
     "rollup": "^0.25.4",
     "rollup-babel-lib-bundler": "^2.2.4"
