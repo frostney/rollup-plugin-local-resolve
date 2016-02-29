@@ -13,7 +13,7 @@ npm install rollup-plugin-local-resolve
 ## Usage
 ```
 import { rollup } from 'rollup';
-import localResolve from 'rollup-plugin-local-resolve.js';
+import localResolve from 'rollup-plugin-local-resolve';
 
 // This will resolve `./files` to `./files/index.js` if the file exists
 rollup({
