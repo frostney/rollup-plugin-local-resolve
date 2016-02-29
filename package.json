@@ -5,7 +5,9 @@
   "main": "dist/rollup-plugin-local-resolve.js",
   "jsnext:main": "dist/rollup-plugin-local-resolve.es2015.js",
   "scripts": {
+    "prebuild": "rimraf dist",
     "build": "rollup-babel-lib-bundler -f cjs,es6 src/index.js",
+    "prepublish": "npm run build",
     "lint": "eslint .",
     "pretest": "npm-run-all -p build lint",
     "test": "ava test/index.js",
