@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/frostney/rollup-plugin-local-resolver.git"
+    "url": "git+https://github.com/frostney/rollup-plugin-local-resolve.git"
   },
   "keywords": [
     "rollup",
@@ -31,9 +31,9 @@
   "author": "Johannes Stein",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/frostney/rollup-plugin-local-resolver/issues"
+    "url": "https://github.com/frostney/rollup-plugin-local-resolve/issues"
   },
-  "homepage": "https://github.com/frostney/rollup-plugin-local-resolver#readme",
+  "homepage": "https://github.com/frostney/rollup-plugin-local-resolve#readme",
   "devDependencies": {
     "ava": "^0.12.0",
     "babel-preset-es2015-loose-rollup": "^7.0.0",
