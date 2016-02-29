@@ -19,10 +19,6 @@ import localResolve from 'rollup-plugin-local-resolve';
 rollup({
   entry: './files',
   plugins: [localResolve()],
-}).then(stats => {
-  t.same(stats.modules[0], { id: './files/folder/index.js' });
-  t.same(stats.modules[1], { id: './files/index.js' });
-  t.is(stats.modules.length, 2);
 });
 ```
 
