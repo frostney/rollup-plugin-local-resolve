@@ -1,0 +1,34 @@
+{
+  "name": "rollup-plugin-local-resolver",
+  "version": "1.0.0",
+  "description": "Resolves index.js files with Rollup",
+  "main": "dist/rollup-plugin-local-resolver.js",
+  "scripts": {
+    "build": "rollup-babel-lib-bundler -f cjs,es6 src/index.js",
+    "lint": "npm run lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frostney/rollup-plugin-local-resolver.git"
+  },
+  "keywords": [
+    "rollup",
+    "rollup-plugin",
+    "resolve",
+    "folder",
+    "index"
+  ],
+  "author": "Johannes Stein",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frostney/rollup-plugin-local-resolver/issues"
+  },
+  "homepage": "https://github.com/frostney/rollup-plugin-local-resolver#readme",
+  "devDependencies": {
+    "babel-preset-es2015-loose-rollup": "^7.0.0",
+    "eslint": "^2.2.0",
+    "eslint-config-airbnb": "^6.0.2",
+    "rollup-babel-lib-bundler": "^2.2.4"
+  }
+}
