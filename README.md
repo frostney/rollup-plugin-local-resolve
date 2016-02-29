@@ -11,7 +11,7 @@ npm install rollup-plugin-local-resolve
 ```
 
 ## Usage
-```
+```javascript
 import { rollup } from 'rollup';
 import localResolve from 'rollup-plugin-local-resolve';
 
