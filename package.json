@@ -8,7 +8,8 @@
     "build": "rollup-babel-lib-bundler -f cjs,es6 src/index.js",
     "lint": "eslint .",
     "pretest": "npm-run-all -p build lint",
-    "test": "ava test/index.js"
+    "test": "ava test/index.js",
+    "coverage": "nyc npm test"
   },
   "repository": {
     "type": "git",

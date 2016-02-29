@@ -7,4 +7,4 @@ script:
   - npm test
 
 after_success:
-  nyc npm test && nyc report --reporter=text-lcov | coveralls
+  npm run coverage && nyc report --reporter=text-lcov | coveralls
