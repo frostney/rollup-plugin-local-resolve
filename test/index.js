@@ -8,8 +8,8 @@ test(t =>
     entry: './files/index.js',
     plugins: [localResolve()],
   }).then(stats => {
-    t.same(stats.modules[0], { id: './files/folder/index.js' });
-    t.same(stats.modules[1], { id: './files/index.js' });
+    t.is(stats.modules[0].id.endsWith('/files/folder/index.js'), true);
+    t.is(stats.modules[1].id.endsWith('/files/index.js'), true);
     t.is(stats.modules.length, 2);
   })
 );
