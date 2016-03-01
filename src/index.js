@@ -18,7 +18,13 @@ export default function localResolver() {
       const dirIndexFile = path.join(directory + importee, 'index.js');
 
       // TODO: This should be asynchronous
-      const stats = statSync(dirIndexFile);
+      let stats;
+
+      try {
+        stats = statSync(dirIndexFile);
+      } catch (e) {
+        return null;
+      }
 
       if (stats.isFile()) {
         return dirIndexFile;
