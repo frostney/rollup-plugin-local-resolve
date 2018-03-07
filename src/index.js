@@ -1,7 +1,7 @@
 import { statSync } from 'fs';
 import path from 'path';
 
-export default function localResolver() {
+export default function localResolver(options = { extensions: ['.js'] }) {
   return {
     resolveId(importee, importer) {
       if (importee.indexOf('./') === -1) {
@@ -12,25 +12,21 @@ export default function localResolver() {
         return null;
       }
 
-      const basename = path.basename(importer);
-      const directory = importer.split(basename)[0];
+      const { dir } = path.parse(importer);
 
-      const dirIndexFile = path.join(directory + importee, 'index.js');
-
-      // TODO: This should be asynchronous
-      let stats;
-
-      try {
-        stats = statSync(dirIndexFile);
-      } catch (e) {
-        return null;
-      }
-
-      if (stats.isFile()) {
-        return dirIndexFile;
-      }
-
-      return null;
+      return options.extensions.reduce((agg, ext) => agg.concat([
+        path.join(dir, `${importee}${ext}`),
+        path.join(dir, importee, `index${ext}`),
+      ]), [])
+      .sort()
+      .find(possibleImporteePath => {
+        // TODO: This should be asynchronous
+        try {
+          return statSync(possibleImporteePath).isFile();
+        } catch (e) {
+          return false;
+        }
+      });
     },
   };
 }
