@@ -1,3 +1,3 @@
-import folder from './folder';
+import file from './App';
 
-folder();
+file();

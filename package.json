@@ -8,7 +8,7 @@
     "prebuild": "rimraf dist",
     "build": "rollup-babel-lib-bundler -f cjs,es6 src/index.js",
     "prepublish": "npm run build",
-    "lint": "eslint .",
+    "lint": "eslint . --ext .js,.jsx",
     "pretest": "npm-run-all -p build lint",
     "test": "ava test/index.js",
     "coverage": "nyc npm test"
