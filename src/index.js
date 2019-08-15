@@ -17,9 +17,8 @@ export default function localResolver(options = { extensions: ['.js'] }) {
 
       let resolved = null;
 
-      // find will stop at the first occurrency
+      // find will stop at the first occurrence
       options.extensions.find(extension => {
-
         const dirIndexFile = path.join(directory + importee, `index${extension}`);
 
         // TODO: This should be asynchronous
@@ -35,6 +34,8 @@ export default function localResolver(options = { extensions: ['.js'] }) {
           resolved = dirIndexFile;
           return true;
         }
+
+        return false;
       });
 
       return resolved;
