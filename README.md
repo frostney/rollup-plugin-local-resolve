@@ -7,7 +7,7 @@ Rollup by default doesn't handle resolving `./folder` to `./folder/index.js` int
 
 ## Installation
 ```
-npm install rollup-plugin-local-resolve
+npm install --save-dev rollup-plugin-local-resolve
 ```
 
 ## Usage
