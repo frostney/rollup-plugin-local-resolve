@@ -18,7 +18,9 @@ import localResolve from 'rollup-plugin-local-resolve';
 // This will resolve `./files` to `./files/index.js` if the file exists
 rollup({
   entry: './files',
-  plugins: [localResolve()],
+  plugins: [localResolve({
+    extensions: ['.jsx', '.js'] // default ['.js']
+  })],
 });
 ```
 
