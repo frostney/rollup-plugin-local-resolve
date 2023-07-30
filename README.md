@@ -21,6 +21,16 @@ rollup({
   plugins: [localResolve()],
 });
 ```
+if you want to resolve a different file than `index.js` you can pass a `extensions` option to the plugin:
+```javascript
+// This will resolve `./files` to `./files/index.js` or `./files/index.jsx` if the file exists
+rollup({
+  entry: './files',
+  plugins: [localResolve({
+    extensions: ['.js', '.jsx'],
+  })],
+});
+```
 
 ## Things to improve on
 - Check for `index.js` file asynchronously
